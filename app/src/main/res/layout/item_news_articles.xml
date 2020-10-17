@@ -57,22 +57,21 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvArticleTitle"
+        style="@style/Widget.NewsApp.TitleText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/spacing_double"
-        android:paddingBottom="@dimen/spacing_standard"
-        android:textAppearance="?attr/textAppearanceHeadline6"
         app:layout_constraintEnd_toStartOf="@id/imageCardView"
         app:layout_constraintStart_toEndOf="@id/startGuideline"
         app:layout_constraintTop_toBottomOf="@id/topGuideline"
-        tools:text="Self Analysis (ಆತ್ಮಾವಲೋಕನ)" />
+        tools:text="Atlanta Braves' A.J. Minter strikes out 7 in 3 innings in starting debut - ESPN" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvArticleDate"
+        style="@style/Widget.NewsApp.DescriptionText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/spacing_double"
-        android:textAppearance="?attr/textAppearanceCaption"
+        android:layout_marginTop="@dimen/spacing_standard"
         app:layout_constraintEnd_toStartOf="@id/imageCardView"
         app:layout_constraintStart_toEndOf="@id/startGuideline"
         app:layout_constraintTop_toBottomOf="@id/tvArticleTitle"
@@ -87,14 +86,14 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tvArticleDescription"
+        style="@style/Widget.NewsApp.DescriptionText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/spacing_double"
-        android:textAppearance="?attr/textAppearanceCaption"
         app:layout_constraintBottom_toBottomOf="@id/bottomGuideline"
         app:layout_constraintEnd_toStartOf="@id/endGuideline"
         app:layout_constraintStart_toEndOf="@id/startGuideline"
         app:layout_constraintTop_toBottomOf="@id/topBarrier"
-        tools:text="ಪ್ರತಿಯೊಬ್ಬ ಮನುಷ್ಯನಲ್ಲೂ ಎರಡು ತರಹದ ನಾಯಿಗಳು ಯಾವಾಗಲೂ ಜಗಳ ಆಡ್ತಾ ಇರುತ್ತವೆ." />
+        tools:text="The coronavirus pandemic has brought countries to a standstill. In many places, as countries reopen, Covid-19 cases are on the rise. Follow here for the latest." />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
