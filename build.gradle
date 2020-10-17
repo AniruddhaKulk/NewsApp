@@ -33,6 +33,7 @@ task clean(type: Delete) {
 ext {
 
     appCompatVersion = '1.2.0'
+    materialVersion = '1.2.1'
     constraintLayoutVersion = '2.0.2'
     glideVersion = '4.11.0'
     hiltAndroidXVersion = '1.0.0-alpha02'
