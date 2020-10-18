@@ -6,10 +6,10 @@ import java.util.*
 class Converters {
 
     @TypeConverter
-    fun fromTimeStamp(value: Long): Date =
-        Date(value)
+    fun fromTimeStamp(value: Long?): Date? =
+        value?.let { Date(it) }
 
     @TypeConverter
-    fun toTimeStamp(date: Date): Long =
-        date.time
+    fun dateToTimeStamp(date: Date): Long? =
+        date?.time
 }

@@ -4,14 +4,11 @@ import androidx.annotation.Nullable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import java.util.*
 
 
 @Entity(tableName = "articles")
 data class ArticleEntity(
-
-    @ColumnInfo(name = "_id")
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
 
     @ColumnInfo(name = "type")
     val type: String,
@@ -29,7 +26,7 @@ data class ArticleEntity(
 
     @ColumnInfo(name = "description")
     @Nullable
-    val description: String,
+    val description: String?,
 
     @ColumnInfo(name = "url")
     val url: String,
@@ -42,7 +39,10 @@ data class ArticleEntity(
     @Nullable
     val content: String?,
 
-    /*@ColumnInfo(name = "publish_time")
-    val publishedAt: Long*/
+    @ColumnInfo(name = "publish_time")
+    val publishedAt: Date?
 
-)
+){
+    @PrimaryKey(autoGenerate = true)
+    var id: Long = 0
+}
