@@ -24,6 +24,7 @@ class NewsApplication: Application(){
 
     private fun isNight(): Boolean {
         val currentHour = Calendar.getInstance().get(Calendar.HOUR_OF_DAY)
-        return (currentHour <= 8 || currentHour >= 19)
+        //return (currentHour <= 8 || currentHour >= 19)
+        return false
     }
 }

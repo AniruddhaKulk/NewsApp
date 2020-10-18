@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.anikulki.newsapp.R
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 
+@ExperimentalCoroutinesApi
 @AndroidEntryPoint
 class NewsArticleFragment: Fragment(R.layout.fragment_news_articles) {
 
@@ -16,5 +18,6 @@ class NewsArticleFragment: Fragment(R.layout.fragment_news_articles) {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getTopNews()
+
     }
 }
