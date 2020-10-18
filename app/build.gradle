@@ -35,6 +35,10 @@ android {
         }
     }
 
+    buildTypes.each {
+        it.buildConfigField "String", "API_KEY", NEWS_API_KEY
+    }
+
     buildFeatures {
         viewBinding true
     }
