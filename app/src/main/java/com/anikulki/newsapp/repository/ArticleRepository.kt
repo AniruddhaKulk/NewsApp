@@ -1,5 +1,6 @@
 package com.anikulki.newsapp.repository
 
+import android.util.Log
 import com.anikulki.newsapp.data.local.db.DatabaseService
 import com.anikulki.newsapp.data.local.db.entity.ArticleEntity
 import com.anikulki.newsapp.data.remote.NetworkService

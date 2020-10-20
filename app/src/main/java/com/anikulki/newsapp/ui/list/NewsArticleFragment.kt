@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.anikulki.newsapp.R
 import com.anikulki.newsapp.databinding.FragmentNewsArticlesBinding
 import com.anikulki.newsapp.utils.common.State
@@ -25,6 +26,17 @@ class NewsArticleFragment: Fragment(R.layout.fragment_news_articles) {
 
         _binding = FragmentNewsArticlesBinding.bind(view)
 
+
+        val dividerItemDecoration = DividerItemDecoration(requireContext(),
+            DividerItemDecoration.VERTICAL)
+
+        val adapter = NewsAdapter()
+
+        binding.apply {
+            rvNewsArticles.adapter = adapter
+            rvNewsArticles.addItemDecoration(dividerItemDecoration)
+        }
+
         viewModel.getTopNews()
 
         viewModel.articlesLiveData.observe(viewLifecycleOwner){state ->
@@ -32,6 +44,7 @@ class NewsArticleFragment: Fragment(R.layout.fragment_news_articles) {
                 is State.Loading -> binding.swipeRefresh.isRefreshing = true
 
                 is State.Success -> {
+                    adapter.submitList(state.data)
                     binding.swipeRefresh.isRefreshing = false
                 }
 
