@@ -40,7 +40,6 @@ object NewsAppModule {
     @Singleton
     fun provideNetworkService(client: Lazy<OkHttpClient>): NetworkService =
         Networking.create(
-            BuildConfig.API_KEY,
             BuildConfig.BASE_URL,
             client
         )

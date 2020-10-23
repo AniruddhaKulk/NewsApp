@@ -1,0 +1,19 @@
+{
+  "status": "ok",
+  "totalResults": 38,
+  "articles": [
+    {
+      "source": {
+        "id": "cnn",
+        "name": "CNN"
+      },
+      "author": "Maeve Reston, CNN",
+      "title": "Trump in need of a game-changing moment as he meets Joe Biden for final debate - CNN",
+      "description": "President Donald Trump enters the final presidential debate on Thursday in need of a major shakeup that will change the trajectory of the race as he trails Joe Biden in both national polls and key swing states that will determine whether he has a path to vict…",
+      "url": "https://www.cnn.com/2020/10/22/politics/2020-election-final-presidential-debate/index.html",
+      "urlToImage": "https://cdn.cnn.com/cnnnext/dam/assets/201022110005-05-trump-biden-split-super-tease.jpg",
+      "publishedAt": "2020-10-22T22:24:00Z",
+      "content": "(CNN)President Donald Trump enters the final presidential debate on Thursday in need of a major shakeup that will change the trajectory of the race as he trails Joe Biden in both national polls and k… [+4406 chars]"
+    }
+  ]
+}
