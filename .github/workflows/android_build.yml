@@ -15,8 +15,19 @@ jobs:
         with:
           java-version: 1.8
 
+      - name: Cache Gradle Caches
+        uses: actions/cache@v1
+        with:
+          path: ~/.gradle/caches/
+          key: cache-clean-gradle-${{ matrix.os }}-${{ matrix.jdk }}
+          - name: Cache Gradle Wrapper
+            uses: actions/cache@v1
+            with:
+              path: ~/.gradle/wrapper/
+              key: cache-clean-wrapper-${{ matrix.os }}-${{ matrix.jdk }}
 
-      - name: Run Tests
+
+      - name: Unit Tests
         run: ./gradlew test
 
 
