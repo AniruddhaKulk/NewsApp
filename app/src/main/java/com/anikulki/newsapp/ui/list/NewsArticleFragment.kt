@@ -34,7 +34,7 @@ class NewsArticleFragment: Fragment(R.layout.fragment_news_articles) {
 
         binding.apply {
             rvNewsArticles.adapter = adapter
-            rvNewsArticles.addItemDecoration(dividerItemDecoration)
+            //rvNewsArticles.addItemDecoration(dividerItemDecoration)
         }
 
         viewModel.getTopNews()

@@ -48,14 +48,14 @@ class NewsAdapter: ListAdapter<ArticleEntity, NewsAdapter.ArticleHolder>(DIFF_UT
 
         fun bind(article: ArticleEntity){
             binding.apply {
-                tvArticleTitle.text = article.title
 
-                tvArticleDescription.text = article.description ?: ""
+                tvArticleTitle.text = article.title
 
                 Glide.with(itemView.context)
                     .load(article.imageUrl)
                     .transition(DrawableTransitionOptions.withCrossFade())
                     .into(ivArticle)
+
             }
         }
     }
